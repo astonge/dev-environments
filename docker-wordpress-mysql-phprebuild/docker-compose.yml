@@ -1,0 +1,25 @@
+version: "2"
+
+services:
+  database:
+    container_name: "wp-dev-db"
+    image: mariadb
+    volumes:
+      - ./database:/var/lib/mysql
+    ports:
+      - "8081:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password2018
+  
+  wordpress:
+    container_name: "wp-dev"
+    image: wordpress:latest
+    build: .
+    volumes:
+      - ./wordpress:/var/www/html
+    ports:
+      - "8080:80"
+    links:
+      - database:mysql
+    environment:
+      WORDPRESS_DB_PASSWORD: password2018
