@@ -1,0 +1,3 @@
+docker-wordpress/data/
+docker-wordpress/wordpress/
+vagrant-debian9-netinst/.vagrant/
