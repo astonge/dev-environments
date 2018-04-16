@@ -3,3 +3,5 @@ docker-wordpress/wordpress/
 vagrant-debian9-netinst/.vagrant/
 docker-wordpress-mysql-phprebuild/database/
 docker-wordpress-mysql-phprebuild/wordpress/
+node_modules
+nodejs-express-bootstrap/node_modules
